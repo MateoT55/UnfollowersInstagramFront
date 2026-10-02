@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram Unfollowers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <h1>Instagram Unfollowers</h1>
+      <p>Descubrí quién no te sigue de vuelta</p>
+    </header>
+
+    <div class="layout">
+      <section class="panel" aria-label="Carga de archivos">
+        <div class="dropzones">
+          <label class="dropzone" id="zone-seguidores" for="input-seguidores">
+            <input type="file" id="input-seguidores" accept=".json,application/json" hidden>
+            <span class="dz-icon" aria-hidden="true">+</span>
+            <strong>Seguidores</strong>
+            <span class="dz-file" data-empty="Seleccioná o arrastrá el JSON">Seleccioná o arrastrá el JSON</span>
+          </label>
+
+          <label class="dropzone" id="zone-seguidos" for="input-seguidos">
+            <input type="file" id="input-seguidos" accept=".json,application/json" hidden>
+            <span class="dz-icon" aria-hidden="true">+</span>
+            <strong>Seguidos</strong>
+            <span class="dz-file" data-empty="Seleccioná o arrastrá el JSON">Seleccioná o arrastrá el JSON</span>
+          </label>
+        </div>
+
+        <div id="message" class="message" role="alert" hidden></div>
+
+        <button id="scan-btn" class="scan" type="button">
+          <span class="spinner" aria-hidden="true"></span>
+          <span id="scan-label">SCAN</span>
+        </button>
+      </section>
+
+      <section class="panel results" aria-live="polite">
+        <h2>Resultados</h2>
+        <div id="results-body">
+          <p class="placeholder">Cargá los dos archivos y presioná SCAN para ver quién no te sigue de vuelta.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
