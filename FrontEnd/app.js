@@ -1,5 +1,5 @@
 // ---------- Configuración ----------
-const API_URL = "https://unfollowersinstagram.onrender.com";
+const API_URL = "https://unfollowersinstagram.onrender.com/api/Unfollowers/Scan";
 
 // ---------- Capa de API (sin lógica visual) ----------
 async function scanFiles(seguidores, seguidos) {
