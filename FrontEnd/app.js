@@ -25,6 +25,7 @@ async function readError(response) {
   try {
     const data = JSON.parse(raw);
     if (typeof data === "string") return data;
+    if (data.error) return data.error;
     if (data.errors) return Object.values(data.errors).flat().join(" ");
     if (data.title) return data.title;
   } catch { /* no era JSON */ }
